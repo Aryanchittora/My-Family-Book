@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+          My Family Book 
+    </title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+
+ <body>
+    <div>
+        <h1 id="Header">
+            My Family Book
+        </h1>
+        
+        <br>
+
+        <img id="Pictures" src="My Family Book.jpg">
+        
+        <br>
+
+        <h3 id="name">
+        </h3>
+
+        <br>
+
+        <button type="button" onclick="Next()">Next</button> 
+     </div>
+
+     <script>
+        var images = [
+            "unnamed.jpg",
+            "download.png",
+            "11-114021_faith-daytime-old-sister-clipart.png",
+            "83226899-vector-illustration-of-cute-boy-cartoon-waving-hand.jpg",
+            "download.jpg"
+            ];
+
+        var Names = ["Dr.Anurag Chittora","Dr.Neelam Chittora","Anushka Chittora","Aryan Chittora","Scooby"];
+
+        var header = ["My Father","My Mother","My Sister","Me","My Pet Dog"];
+
+        var i = 0;
+
+        function Next() {
+            document.getElementById("Header").innerHTML=header[i];
+            document.getElementById("Pictures").src=images[i];
+            document.getElementById("name").innerHTML=Names[i];
+            i++;
+            if (i>4) {i = 0}
+        }    
+    </script>
+  </body>
+</html>
